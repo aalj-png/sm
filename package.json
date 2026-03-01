@@ -1,0 +1,31 @@
+{
+  "name": "student-management-system",
+  "version": "1.0.0",
+  "description": "A modern student management system with authentication and CRUD operations",
+  "private": true,
+  "scripts": {
+    "install-all": "npm install && cd backend && npm install && cd ../frontend && npm install && cd ..",
+    "dev": "concurrently \"npm --prefix backend run dev\" \"npm --prefix frontend run dev\"",
+    "build": "npm --prefix backend build && npm --prefix frontend run build",
+    "start": "npm --prefix backend start",
+    "start-frontend": "npm --prefix frontend run dev",
+    "start-backend": "npm --prefix backend run dev",
+    "deploy": "node deploy.js",
+    "deploy:windows": "cmd /c deploy.bat",
+    "deploy:unix": "bash deploy.sh",
+    "push": "cmd /c push-with-token.bat",
+    "push:unix": "bash push-with-token.sh"
+  },
+  "keywords": [
+    "student",
+    "management",
+    "react",
+    "express",
+    "mongodb"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
